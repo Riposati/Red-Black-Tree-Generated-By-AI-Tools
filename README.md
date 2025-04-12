@@ -1,24 +1,23 @@
-PROJETO CRIADO POR MIM E IA GENERATIVAS COMO CHAT GPT, AMAZON Q
+# 🌳 Red-Black Tree in Java  
+**Project created by me and generative AIs like ChatGPT and Amazon Q**
 
-# 🌳 Red-Black Tree em Java
+This project implements a **Red-Black Tree** in Java, including insertion, deletion, tree traversals, and visual printing of the tree structure in the console.
 
-Este projeto implementa uma **Árvore Rubro-Negra (Red-Black Tree)** em Java, com operações de inserção, remoção, travessias e visualização da estrutura da árvore no console.
+## 📚 What is a Red-Black Tree?
 
-## 📚 O que é uma Árvore Rubro-Negra?
+A Red-Black Tree is a **self-balancing binary search tree** that guarantees **O(log n)** time complexity for insertion, deletion, and search operations. It maintains its properties using **node colors (red/black)** and **rotations** to balance itself.
 
-A Árvore Rubro-Negra é uma árvore binária de busca autobalanceada que garante complexidade de tempo **O(log n)** para inserção, remoção e busca. Ela mantém suas propriedades através de **cores (vermelho/preto)** e **rotações**.
+## ✅ Features
 
-## ✅ Funcionalidades
-
-- ✅ Inserção de valores
-- ✅ Remoção de valores
-- ✅ Impressão da árvore em:
-  - Ordem (InOrder)
-  - Pré-Ordem (PreOrder)
-  - Pós-Ordem (PostOrder)
-- ✅ Impressão visual da estrutura da árvore com cores
-- ✅ Balanceamento automático
-- ✅ Implementação das principais operações auxiliares:
+- ✅ Value insertion  
+- ✅ Value deletion  
+- ✅ Tree traversal printing:
+  - In-Order
+  - Pre-Order
+  - Post-Order  
+- ✅ Visual representation of the tree structure with node colors  
+- ✅ Automatic balancing  
+- ✅ Core helper operations:
   - `rotateLeft`
   - `rotateRight`
   - `flipColors`
@@ -26,7 +25,7 @@ A Árvore Rubro-Negra é uma árvore binária de busca autobalanceada que garant
   - `moveRedRight`
   - `fixUp`
 
-## 🧪 Exemplo de uso
+## 🧪 Usage Example
 
 ```java
 public class Main {
@@ -57,7 +56,7 @@ public class Main {
 }
 ```
 
-## 🖼️ Saída esperada (exemplo)
+## 🖼️ Expected Output (Example)
 
 ```
 In Order: 10 20 30 40 
@@ -67,18 +66,18 @@ Post Order: 10 40 30 20
     ├── 40(R)
     └── 10(R)
 
-Após remoções:
+After deletions:
 └── 30(B)
     └── 10(R)
 ```
 
-## 🧠 Como funciona o balanceamento?
+## 🧠 How Balancing Works
 
-- Nós recém-inseridos são vermelhos.
-- As rotações e a troca de cores (`flipColors`) mantêm as propriedades da árvore rubro-negra.
-- Durante a remoção, as operações `moveRedLeft` e `moveRedRight` são utilizadas para garantir que o nó alvo esteja preparado para remoção sem quebrar as propriedades da árvore.
+- Newly inserted nodes are red.
+- Rotations and color flipping (`flipColors`) maintain the red-black tree properties.
+- During deletion, `moveRedLeft` and `moveRedRight` are used to prepare the target node for safe removal without violating tree properties.
 
-## 🛠️ Estrutura do projeto
+## 🛠️ Project Structure
 
 ```
 src/
@@ -87,19 +86,23 @@ src/
 │   └── Main.java
 ```
 
-## 🚀 Como executar
+## 🚀 How to Run
 
-1. Compile os arquivos:
+1. Compile the files:
+
    ```bash
    javac org/example/*.java
    ```
 
-2. Execute a aplicação:
+2. Run the application:
+
    ```bash
    java org.example.Main
    ```
 
-## 📌 Observações
+## 📌 Notes
 
-- Esta implementação é educacional e tem foco em clareza, não em performance máxima.
-- O método `printTree` é útil para depuração, mostrando a estrutura da árvore e suas cores (R para vermelho, B para preto).
+- This implementation is educational and prioritizes **clarity over performance**.
+- The `printTree` method is useful for **debugging**, displaying the tree structure with node colors:
+  - `(R)` for red
+  - `(B)` for black
